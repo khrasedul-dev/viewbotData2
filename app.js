@@ -43,7 +43,7 @@ app.get("/",async (req,res)=>{
             <tr>
                 <td>${data.userId}<td/>
                 <td>${data.name}<td/>
-                <td>${data.referral_id || 'Empty'}<td/>
+                <td>${data.referrer_id || 'Empty'}<td/>
                 <td>${data.referral_count}<td/>
                 <td>${data.wallet}<td/>
                 <td>${data.twitter}<td/>
