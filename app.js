@@ -25,6 +25,9 @@ const newSchema = new mongoose.Schema({
     reddit: {
         type: String
     },
+    facebook:{
+        type: String
+    },
     wallet: {
         type: String
     }
@@ -48,6 +51,7 @@ app.get("/",async (req,res)=>{
                 <td>${data.wallet}<td/>
                 <td>${data.twitter}<td/>
                 <td>${data.reddit}<td/>
+                <td>${data.facebook}<td/>
             </tr>`
         })
     }
@@ -101,6 +105,7 @@ app.get("/",async (req,res)=>{
     <th>Wallet<th/>
     <th>Twitter<th/>
     <th>Reddit<th/>
+    <th>Facebook<th/>
     </tr>
 ${htdata}
     </table>
