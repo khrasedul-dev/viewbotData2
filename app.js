@@ -35,7 +35,7 @@ const User = mongoose.model('user',newSchema)
 const app = express();
 
 app.get("/",async (req,res)=>{
-    const data = await User.find();
+    const data = await User.find().sort({referral_count: -1})
     let htdata = ""
     if(data.length > 0){
         data.map((data)=>{
